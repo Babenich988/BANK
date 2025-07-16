@@ -49,12 +49,11 @@
 
 body {
   background-image: url('images/TCom_MarbleSlabGoldB_header3.jpg');
-  background-repeat: no-repeat;        /* не повторять */
-  background-size: cover;              /* масштабировать, чтобы покрыть весь экран */
+  background-repeat: no-repeat;        /* не повторять */             /* масштабировать, чтобы покрыть весь экран */
   background-position: center center; /* центрировать */
   background-attachment: fixed;        /* фон остаётся на месте при прокрутке */
   margin: 0;
-  min-height: 0;
+  min-height: 100vh;
   padding: 0;
   border-radius: 0;
 }
@@ -118,6 +117,24 @@ main {
   display: flex;
   flex-direction: column;
   flex: 1;
+}
+
+.men {
+  position: absolute;
+  bottom: 0;
+  left: 15%;
+  transform: translateX(-50%);
+  height: 900px; /* или auto, в зависимости от макета */
+  z-index: 10;
+}
+
+.women{
+  position: absolute;
+  bottom: 0;
+  right: -30%;
+  transform: translateX(-50%) translateY(15%);
+  height: 1100px; /* или auto, в зависимости от макета */
+  z-index: 10;
 }
 
 
