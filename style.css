@@ -1,3 +1,13 @@
+/* === ОБЩИЕ СБРОСЫ И СЕТКА === */
+
+/* Сброс отступов для html и body */
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+/* Основной контейнер body с фоном */
 body {
   background-image: url('images/TCom_MarbleSlabGoldB_header3.jpg');
   background-repeat: no-repeat;        /* не повторять */             /* масштабировать, чтобы покрыть весь экран */
@@ -9,6 +19,7 @@ body {
   border-radius: 0;
 }
 
+/* Контейнер <main>, который тянется по высоте страницы */
 .main {
   display: flex;
   justify-content: space-between;
@@ -22,6 +33,24 @@ body {
   z-index: 100;
 }
 
+/* === ХЕДЕР === */
+
+/* Основной хедер (шапка) */
+.main, header.main {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 60px;
+  height: 100px;
+  background-color: rgba(0, 0, 0, 0.3);       /* Полупрозрачный фон */
+  backdrop-filter: blur(6px);                /* Размытие фона */
+  position: sticky;                          /* Прикреплён сверху при скролле */
+  top: 0;
+  z-index: 100;
+  background: transparent;
+}
+
+/* Логотип в хедере */
 .logo {
   font-family: "Cinzel Decorative", serif;
   font-size: 3rem;
@@ -32,26 +61,20 @@ body {
   -webkit-background-clip: text;
   color: transparent;
   animation: logoGoldFlow 6s linear infinite;
-
-  text-shadow:
-    1px 1px 1px rgba(0,0,0,0.2),
-    2px 2px 2px rgba(0,0,0,0.15),
-    -1px -1px 1px rgba(255, 255, 255, 0.1);
 }
+/* Анимация перелива золотого логотипа */
 @keyframes logoGoldFlow {
-  0% {
-    background-position: 0% center;
-  }
-  100% {
-    background-position: 200% center;
-  }
+  0% { background-position: 0% center; }
+  100% { background-position: 200% center; }
 }
 
+/* Меню навигации */
 .navigation {
   display: flex;
-  gap: 20px;
+  gap: 20px; /* Расстояние между пунктами */
 }
 
+/* Ссылки в навигации */
 .navigation a {
   font-family: "Cinzel Decorative", serif;
   font-size: 1.2rem;
@@ -60,39 +83,185 @@ body {
   text-decoration: none;
   padding: 10px 18px;
   border-radius: 50px;
+  background: none;
+  transition: all 0.4s ease;
   position: relative;
   overflow: hidden;
-  transition: all 0.4s ease;
-  background: none; /* убираем фон */
 }
 
-/* Эффект при наведении */
+/* Эффекты при наведении */
 .navigation a:hover {
   color: transparent;
   background: linear-gradient(45deg, #f9d976, #b8860b, #f7c873, #a97400);
   background-size: 200% auto;
   background-clip: text;
   -webkit-background-clip: text;
-
   border: 2px solid #d4af37;
   box-shadow: 0 0 8px rgba(255, 215, 0, 0.3);
   animation: goldFlow 3s linear infinite;
 }
 
 @keyframes goldFlow {
-  0% {background-position: 0% center;}
-  100% {background-position: 200% center;}
+  0% { background-position: 0% center; }
+  100% { background-position: 200% center; }
 }
-/* сам футер «сдвигается» вниз благодаря margin-top: auto */
+
+/* === HERO — ПЕРВАЯ СЕКЦИЯ === */
+
+.hero {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;       /* Центрируем по вертикали */
+  align-items: center;          /* Центрируем по горизонтали */
+  position: relative;
+  background-image: url('images/TCom_MarbleSlabGoldB_header3.jpg'); /* Установи нужный фон */
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  overflow: hidden;
+}
+
+/* Логотип и навигация — наверху */
+header.main {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding: 20px 40px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 10;
+    background: transparent;
+}
+
+/* Контент внутри первой секции */
+.hero-content {
+  text-align: center;
+  z-index: 5;
+}
+
+.hero-title {
+  font-size: 5rem;
+  font-family: 'Cinzel Decorative', serif;
+  margin-bottom: 20px;
+  color: white;
+}
+
+.hero-subtext {
+    font-size: 1.5rem;
+    color: white;
+}
+
+.Words {
+    text-align: center;
+    font-family: 'Cinzel Decorative', serif;
+    font-size: 4rem;
+    color: #222;
+    margin-top: 60px;
+}
+
+/* === ВТОРАЯ СЕКЦИЯ === */
+
+.sec {
+  min-height: 100vh;
+  padding: 100px 40px;
+  background-image: url('images/TCom_MarbleSlabGoldB_header3.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  color: #ddd;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+/* Заголовок и текст в секции */
+.sec h2 {
+  font-size: 3em;
+  margin-bottom: 10px;
+  color: #ddd;
+}
+
+.sec p {
+  font-size: 1em;
+  font-weight: 300;
+  color: #ddd;
+}
+
+/* Текст поверх экрана (если используется для эффекта) */
+#text {
+  position: absolute;
+  font-size: 5em;
+  color: #ddd;
+}
+
+/* === ДОБАВЛЕННЫЙ БЛОК СО СТАТУЕЙ ЖЕНЩИНЫ === */
+
+#woman-statue {
+  width: 300px;
+  height: 400px;
+  background-image: url('images/women.png'); /* Подставь свой путь */
+  background-size: cover;
+  background-position: center;
+  margin: 40px auto;
+}
+
+/* === ПОДВИЖНЫЕ СТАТУИ (необязательные) === */
+
+.statues-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  pointer-events: none;
+  z-index: 2;
+  overflow: hidden;
+}
+
+#men, #women {
+  position: absolute;
+  top: 130px;
+  transform: translateX(0);
+  transition: transform 0.1s ease-out, opacity 0.5s ease;
+  pointer-events: none;
+  opacity: 1;
+}
+
+#men {
+  left: -5%;
+  height: 85vh;
+}
+
+#women {
+  right: -5%;
+  height: 95vh;
+  transform: translateX(0) translateY(5%);
+}
+
+/* === ДОПОЛНИТЕЛЬНЫЙ ТЕКСТ (Words) === */
+
+.Words {
+  text-align: center;
+  font-family: 'Cinzel Decorative', serif;
+  font-size: 4rem;
+  color: #222;
+  margin-top: 60px;
+}
+
+/* === FOOTER === */
+
 .footer {
-  margin-top: auto;
   background: linear-gradient(180deg, #2f2f2f 0%, #1f1f1f 100%);
   color: #ddd;
   font-family: 'Cinzel Decorative', serif;
   padding: 20px 0 0;
   box-shadow: 0 -5px 15px rgba(0, 0, 0, 0.5);
+  scroll-snap-align: none; /* отключаем прилипающий эффект */
 }
 
+/* Контейнер внутри футера */
 .footer__container {
   display: flex;
   flex-wrap: wrap;
@@ -123,6 +292,7 @@ body {
   color: #f9d976;
 }
 
+/* Нижняя строка футера */
 .footer__bottom {
   text-align: center;
   padding: 20px 0;
@@ -131,54 +301,3 @@ body {
   color: #777;
 }
 
-html, body {
-  height: 100%;
-  margin: 0;
-  padding: 0;
-}
-
-body {
-  display: flex;
-  flex-direction: column;
-}
-
-/* main «растягивается», заполняя всё свободное пространство */
-main {
-  display: flex;
-  flex-direction: column;
-  flex: 1;
-}
-
-.statues-container {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100vh;
-  pointer-events: none; /* чтобы статуи не мешали кликам */
-  z-index: 2; /* ниже хедера и текста */
-  overflow: hidden;
-}
-
-#men, #women {
-  position: absolute;
-  top: 130px;
-  transform: translateX(0);
-  transition: transform 0.1s ease-out, opacity 0.5s ease;
-  pointer-events: none;
-  opacity: 1;
-}
-
-/* Подогнанные размеры */
-#men {
-  left: -5%;
-  height: 85vh;
-}
-
-#women {
-  right: -5%;
-  height: 95vh;
-  transform: translateX(0) translateY(5%);
-}
-
- 
