@@ -21,13 +21,15 @@ body {
 
 /* Контейнер <main>, который тянется по высоте страницы */
 .main {
-  display: flex;
-  justify-content: space-between;
+  display: grid;
+  grid-template-columns: auto;
+  grid-column-gap: 15px;
+  justify-content: stretch;
   align-items: center;
   padding: 0 60px;
   height: 100px;
   background-color: rgba(0, 0, 0, 0.3); /* лёгкий фон для читаемости */
-  backdrop-filter: blur(6px);
+  backdrop-filter: blur(3px);
   position: sticky;
   top: 0;
   z-index: 100;
@@ -37,8 +39,10 @@ body {
 
 /* Основной хедер (шапка) */
 .main, header.main {
-  display: flex;
-  justify-content: space-between;
+  display: grid;
+  grid-template-columns: auto;
+  grid-column-gap: 15px;
+  justify-content: stretch;
   align-items: center;
   padding: 0 60px;
   height: 100px;
@@ -53,7 +57,7 @@ body {
 /* Логотип в хедере */
 .logo {
   font-family: "Cinzel Decorative", serif;
-  font-size: 3rem;
+  font-size: 4.5rem;
   font-weight: bold;
   background: linear-gradient(45deg, #f9d976, #b8860b, #f7c873, #a97400);
   background-size: 200% auto;
@@ -71,22 +75,23 @@ body {
 /* Меню навигации */
 .navigation {
   display: flex;
-  gap: 20px; /* Расстояние между пунктами */
+  gap: 50px; /* Расстояние между пунктами */
 }
 
 /* Ссылки в навигации */
 .navigation a {
   font-family: "Cinzel Decorative", serif;
-  font-size: 1.2rem;
+  font-size: 2rem;
   font-weight: bold;
   color: #e8dcc3;
   text-decoration: none;
   padding: 10px 18px;
-  border-radius: 50px;
+  border-radius: 60px;
   background: none;
   transition: all 0.4s ease;
   position: relative;
   overflow: hidden;
+  word-spacing: 120px;/*Отступ между словами*/
 }
 
 /* Эффекты при наведении */
@@ -209,32 +214,24 @@ header.main {
 
 /* === ПОДВИЖНЫЕ СТАТУИ (необязательные) === */
 
-.statues-container {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100vh;
-  pointer-events: none;
-  z-index: 2;
-  overflow: hidden;
-}
-
-#men, #women {
+/*#men, #women {
   position: absolute;
   top: 130px;
   transform: translateX(0);
   transition: transform 0.1s ease-out, opacity 0.5s ease;
   pointer-events: none;
   opacity: 1;
-}
+}*/
 
 #men {
-  left: -5%;
-  height: 85vh;
+  position: absolute;
+  top: 67px;
+  left: -6%;
 }
 
 #women {
+  position: absolute;
+  top: 130px;
   right: -5%;
   height: 95vh;
   transform: translateX(0) translateY(5%);
