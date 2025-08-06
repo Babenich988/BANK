@@ -1,13 +1,9 @@
-const men = document.getElementById('men');
-const women = document.getElementById('women');
+let men = document.getElementById('men');
+let women = document.getElementById('women');
 
-function animateStatues() {
-  const scrollY = window.scrollY;
-
-  men.style.transform = `translateX(-${scrollY * 0.1}px)`;
-  women.style.transform = `translateX(${scrollY * 0.1}px) translateY(15%)`;
-
-  requestAnimationFrame(animateStatues);
-}
-
-animateStatues();
+window.addEventListener('scroll', () =>{
+  let value = window.scrollY;
+  
+  men.style.left= value * -0.85 + 'px';
+  women.style.left= value * 1.30 + 'px';
+})
