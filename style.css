@@ -120,7 +120,7 @@ body {
   justify-content: center;       /* Центрируем по вертикали */
   align-items: center;          /* Центрируем по горизонтали */
   position: relative;
-  background-image: url('images/TCom_MarbleSlabGoldB_header3.jpg'); /* Установи нужный фон */
+  /*background-image: url('images/TCom_MarbleSlabGoldB_header3.jpg'); Установи нужный фон */
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -221,10 +221,10 @@ header.main {
 
 /* === ВТОРАЯ СЕКЦИЯ === */
 
-.sec {
+.credit {
   min-height: 100vh;
   padding: 100px 40px;
-  background-image: url('images/TCom_MarbleSlabGoldB_header3.jpg');
+  /*background-image: url('images/TCom_MarbleSlabGoldB_header3.jpg');*/
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -235,7 +235,7 @@ header.main {
 }
 
 
-.sec p {
+.credit p {
   position: relative;/*можно передвигать объекты*/
   font-family: "Cinzel Decorative", serif;
   bottom: 450px;
@@ -316,16 +316,22 @@ header.main {
 
 /* === ПОДВИЖНЫЕ СТАТУИ (необязательные) === */
 
-#men {
+#men /*статуя на 1 странице*/{
   position: absolute;
   top: 67px;
   left: -6%;
 }
 
-#women {
+#women /*статуя на 2 странице*/{
   position: absolute;
   left: 1840px;
   top:840px;/*подогнал статую по горизонтали вниз*/
+}
+
+#men-2/*статуя на 3 странице*/{
+  position: relative;
+  bottom: 130px;
+  left: -450px;
 }
 
 /* === ДОПОЛНИТЕЛЬНЫЙ ТЕКСТ (Words) === */
