@@ -26,7 +26,7 @@ body {
   grid-column-gap: 15px;
   justify-content: stretch;
   align-items: center;
-  padding: 0 60px;
+  padding: 0 40px;
   height: 100px;
   background-color: rgba(0, 0, 0, 0.3); /* лёгкий фон для читаемости */
   backdrop-filter: blur(3px);
@@ -44,7 +44,7 @@ body {
   grid-column-gap: 15px;
   justify-content: stretch;
   align-items: center;
-  padding: 0 60px;
+  padding: 0 40px;
   height: 100px;
   background-color: rgba(0, 0, 0, 0.3);       /* Полупрозрачный фон */
   backdrop-filter: blur(6px);                /* Размытие фона */
@@ -74,9 +74,10 @@ body {
 
 /* Меню навигации */
 .navigation {
-  display: flex;
-  gap: 30px; /* Расстояние между пунктами */
+  display: inline;
+  gap: 20px;
 }
+
 
 /* Ссылки в навигации */
 .navigation a {
@@ -85,13 +86,12 @@ body {
   font-weight: bold;
   color: #e8dcc3;
   text-decoration: none;
-  padding: 10px 18px;
-  border-radius: 60px;
+  padding: 10px 40px;
+  border-radius: 50px;
   background: none;
   transition: all 0.4s ease;
   position: relative;
   overflow: hidden;
-  word-spacing: 120px;/*Отступ между словами*/
 }
 
 /* Эффекты при наведении */
@@ -113,7 +113,7 @@ body {
 
 /* === HERO — ПЕРВАЯ СЕКЦИЯ === */
 
-.hero {
+#hero {
   height: 100vh;
   display: flex;
   flex-direction: column;
@@ -129,10 +129,10 @@ body {
 
 /* Логотип и навигация — наверху */
 header.main {
-    width: 100%;
+    width: 98.6%;
     display: flex;
     justify-content: space-between;
-    padding: 20px 40px;
+    padding: 10px 20px;
     position: absolute;
     top: 0;
     left: 0;
@@ -221,7 +221,7 @@ header.main {
 
 /* === ВТОРАЯ СЕКЦИЯ === */
 
-.credit {
+#credit {
   min-height: 100vh;
   padding: 100px 40px;
   /*background-image: url('images/TCom_MarbleSlabGoldB_header3.jpg');*/
@@ -235,7 +235,7 @@ header.main {
 }
 
 
-.credit p {
+#credit p {
   position: relative;/*можно передвигать объекты*/
   font-family: "Cinzel Decorative", serif;
   bottom: 450px;
@@ -256,7 +256,7 @@ header.main {
 }
 
 
-/*Текст для слайдера на 1 странице*/
+/*Текст для слайдера на 2 странице*/
 .title-2 {
   font-size: 60px;
   font-weight:900;
@@ -307,7 +307,7 @@ header.main {
   color: transparent;
   animation: text-2 6s linear infinite;
 }
-/* Анимация перелива золотого логотипа */
+/* Анимация перелива золотого */
 @keyframes text-2 {
   0% { background-position: 0% center; }
   100% { background-position: 200% center; }
@@ -328,11 +328,6 @@ header.main {
   top:840px;/*подогнал статую по горизонтали вниз*/
 }
 
-#men-2/*статуя на 3 странице*/{
-  position: relative;
-  bottom: 130px;
-  left: -450px;
-}
 
 /* === ДОПОЛНИТЕЛЬНЫЙ ТЕКСТ (Words) === */
 
@@ -344,13 +339,179 @@ header.main {
   margin-top: 60px;
 }
 
+/* === investition — третья СЕКЦИЯ === */
+#investition p{
+  font-size: 5em;
+  position: relative;
+  top: -220px;
+  font-family: "Cinzel Decorative", serif;
+  background: linear-gradient(45deg, #f9d976, #b8860b, #f7c873, #a97400);
+  background-size: 200% auto;
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+  animation: text-3 6s linear infinite;
+}
+/* Анимация перелива золотого */
+@keyframes text-3 {
+  0% { background-position: 0% center; }
+  100% { background-position: 200% center; }
+}
+
+/*Текст для слайдера на 3 странице*/
+.title-3 {
+  font-size: 60px;
+  font-weight:900;
+  height: 60px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.text-animation-3 {
+  font-size: 70px;
+  margin-left: 250px;/*отступ слева и справа*/
+  margin-right: 250px;
+  color: gold;
+  height: 1080px;/*длина рамки*/
+  background-color: rgba(0, 0, 0, 0.3);       /* Полупрозрачный фон */
+  backdrop-filter: blur(6px);                /* Размытие фона */
+  padding: 0 15px;
+  border-radius: 35px;
+  overflow: hidden;
+  position: relative;
+  left: 200px;
+  top: -1200px;
+}
+
+/*Место расположения всех text блоков*/
+.text-container-3 {
+  display: flex;
+  flex-direction: column;
+}
+
+.text-3 {
+  text-transform: uppercase;
+  text-align: center;
+  line-height: 80px;/*расстояние между строчками*/
+  font-size: 60px;
+  height: 360px;
+}
+
+.text-3 a{
+  font-family: "Cinzel Decorative", serif;
+  font-size: 3.3rem;/*размер текста*/
+  font-weight: bold;
+  background: linear-gradient(45deg, #f9d976, #b8860b, #f7c873, #a97400);
+  background-size: 200% auto;
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+  animation: text-3 6s linear infinite;
+}
+/* Анимация перелива золотого */
+@keyframes text-3 {
+  0% { background-position: 0% center; }
+  100% { background-position: 200% center; }
+}
+
+#men-2/*статуя на 3 странице*/{
+  position: relative;
+  bottom: 370px;
+  left: -450px;
+}
+
+#acsii{
+  height: 1280px;
+}
+/* === acsii — четвертая СЕКЦИЯ === */
+#acsii p{
+  font-size: 6em;
+  position: relative;
+  top: -500px;
+  font-family: "Cinzel Decorative", serif;
+  background: linear-gradient(45deg, #f9d976, #b8860b, #f7c873, #a97400);
+  background-size: 200% auto;
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+  animation: text-4 6s linear infinite;
+}
+/* Анимация перелива золотого */
+@keyframes text-4 {
+  0% { background-position: 0% center; }
+  100% { background-position: 200% center; }
+}
+
+/*Текст для слайдера на 3 странице*/
+.title-4 {
+  font-size: 60px;
+  font-weight:900;
+  height: 60px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.text-animation-4 {
+  font-size: 70px;
+  margin-left: 250px;/*отступ слева и справа*/
+  margin-right: 250px;
+  color: gold;
+  height: 1080px;/*длина рамки*/
+  background-color: rgba(0, 0, 0, 0.3);       /* Полупрозрачный фон */
+  backdrop-filter: blur(6px);                /* Размытие фона */
+  padding: 0 15px;
+  border-radius: 35px;
+  overflow: hidden;
+  position: relative;
+  left: -150px;
+  top: -1750px;
+}
+
+/*Место расположения всех text блоков*/
+.text-container-4 {
+  display: flex;
+  flex-direction: column;
+}
+
+.text-4 {
+  text-transform: uppercase;
+  text-align: center;
+  line-height: 80px;/*расстояние между строчками*/
+  font-size: 60px;
+  height: 360px;
+}
+
+.text-4 a{
+  font-family: "Cinzel Decorative", serif;
+  font-size: 3.3rem;/*размер текста*/
+  font-weight: bold;
+  background: linear-gradient(45deg, #f9d976, #b8860b, #f7c873, #a97400);
+  background-size: 200% auto;
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+  animation: text-4 6s linear infinite;
+}
+/* Анимация перелива золотого */
+@keyframes text-4 {
+  0% { background-position: 0% center; }
+  100% { background-position: 200% center; }
+}
+
+#women-2/*статуя на 4 странице*/{
+  position: relative;
+  bottom: 750px;
+  left: 800px;
+}
 /* === FOOTER === */
 
-.footer {
+#footer {
   background: linear-gradient(180deg, #2f2f2f 0%, #1f1f1f 100%);
   color: #ddd;
   font-family: 'Cinzel Decorative', serif;
-  padding: 20px 0 0;
+  padding: 10px 0 0;
   box-shadow: 0 -5px 15px rgba(0, 0, 0, 0.5);
   scroll-snap-align: none; /* отключаем прилипающий эффект */
 }
@@ -359,6 +520,7 @@ header.main {
 .footer__container {
   display: flex;
   flex-wrap: wrap;
+  height: 900px;
   gap: 40px;
   padding: 40px 60px;
   justify-content: space-around;
@@ -376,7 +538,7 @@ header.main {
 .footer__section p,
 .footer__section a {
   margin: 5px 0;
-  font-size: 0.95rem;
+  font-size: 2rem;
   color: #ccc;
   text-decoration: none;
   transition: color 0.3s ease;
@@ -391,7 +553,7 @@ header.main {
   text-align: center;
   padding: 20px 0;
   background-color: #1c1c1c;
-  font-size: 0.85rem;
+  font-size: 1rem;
   color: #777;
 }
 
