@@ -2,35 +2,35 @@
 
 /* Сброс отступов для html и body */
 html, body {
-  height: 100%;
-  margin: 0;
-  padding: 0;
+  height: 100%;     /*высота*/
+  margin: 0;        /*внешний отступ*/
+  padding: 0;       /*внутрений отступ*/
 }
 
 /* Основной контейнер body с фоном */
 body {
   background-image: url('images/TCom_MarbleSlabGoldB_header3.jpg');
-  background-repeat: no-repeat;        /* не повторять */             /* масштабировать, чтобы покрыть весь экран */
-  background-position: center center; /* центрировать */
+  background-repeat: no-repeat;         /* не повторять */             /* масштабировать, чтобы покрыть весь экран */
+  background-position: center center;   /* центрировать */
   background-attachment: fixed;        /* фон остаётся на месте при прокрутке */
-  margin: 0;
-  min-height: 100vh;
-  padding: 0;
-  border-radius: 0;
+  margin: 0;          /*внешний отступ*/
+  min-height: 100vh;      /*минимальная высота*/
+  padding: 0;           /*внутрений отступ */
+  border-radius: 0;     /*закругление углов*/
 }
 
 /* Контейнер <main>, который тянется по высоте страницы */
 .main {
-  display: grid;
-  grid-template-columns: auto;
-  grid-column-gap: 15px;
-  justify-content: stretch;
-  align-items: center;
-  padding: 0 40px;
-  height: 100px;
-  background-color: rgba(0, 0, 0, 0.3); /* лёгкий фон для читаемости */
-  backdrop-filter: blur(3px);
-  position: sticky;
+  display: grid;      /*дочерний элемент, прямой потомок грид-контейнера. Подчиняется правилам раскладки гридов.*/
+  grid-template-columns: auto;      /*Свойство, которое задает размеры столбцов grid сетки.*/
+  grid-column-gap: 15px;        /*Определяет отступ между столбцами контейнера grid сетки.*/
+  justify-content: stretch;     /*Растягивает элементы grid контейнера так, чтобы они занимали равномерно всю ширину контейнера*/
+  align-items: center;        /*Элементы flexbox / grid выровнены в центре поперечной оси*/
+  padding: 0 40px;        /*внутрений отступ (0 пикселей сверху снизу и 40 пикселей слева и справа)*/
+  height: 100px;        
+  background-color: rgba(0, 0, 0, 0.3);       /* Полупрозрачный фон */
+  backdrop-filter: blur(3px);           /* Размытие фона */
+  position: sticky;     /*Элемент остается в обычном потоке документа, а затем "прилипает" к ближайшему родителю с прокруткой и скроллится вместе с ним.*/
   top: 0;
   z-index: 100;
 }
@@ -39,34 +39,34 @@ body {
 
 /* Основной хедер (шапка) */
 .main, header.main {
-  display: grid;
-  grid-template-columns: auto;
-  grid-column-gap: 15px;
-  justify-content: stretch;
-  align-items: center;
-  padding: 0 40px;
+  display: grid;      /*дочерний элемент, прямой потомок грид-контейнера. Подчиняется правилам раскладки гридов.*/
+  grid-template-columns: auto;    /*Свойство, которое задает размеры столбцов grid сетки.*/
+  grid-column-gap: 15px;        /*Определяет отступ между столбцами контейнера grid сетки.*/
+  justify-content: stretch;/*Растягивает элементы grid контейнера так, чтобы они занимали равномерно всю ширину контейнера*/
+  align-items: center;    /*Элементы flexbox / grid выровнены в центре поперечной оси*/
+  padding: 0 40px;    /*внутрений отступ (0 пикселей сверху снизу и 40 пикселей слева и справа)*/
   height: 100px;
   background-color: rgba(0, 0, 0, 0.3);       /* Полупрозрачный фон */
   backdrop-filter: blur(6px);                /* Размытие фона */
   position: sticky;                          /* Прикреплён сверху при скролле */
   top: 0;
   z-index: 100;
-  background: transparent;
+  background: transparent;      /*фон прозрачный*/
 }
 
 /* Логотип в хедере */
 .logo {
-  font-family: "Cinzel Decorative", serif;
-  font-size: 4.5rem;
-  font-weight: bold;
-  background: linear-gradient(45deg, #f9d976, #b8860b, #f7c873, #a97400);
-  background-size: 200% auto;
-  background-clip: text;
-  -webkit-background-clip: text;
+  font-family: "Cinzel Decorative", serif;      /*Задает семейство шрифтов для текста*/
+  font-size: 4.5rem;      /*размер шрифта в 4.5 раза больше обычного*/
+  font-weight: bold;      /*полужирный шрифт*/
+  background: linear-gradient(45deg, #f9d976, #b8860b, #f7c873, #a97400);/*фон градиент(45 градусов)*/
+  background-size: 200% auto;     /*Размер фонового изображения в процентах относительно размера контейнера, где первый параметр - ширина изображения, второй параметр - высота изображения*/
+  background-clip: text;        /*Фон будет применен для текста элемента. Чтобы эффект был виден, установите цвет текста элемента прозрачным color: transparent;*/
+  -webkit-background-clip: text;    /*обрезает любой фон (в том числе градиентный) по границе текста.*/
   color: transparent;
-  animation: logoGoldFlow 6s linear infinite;
+  animation: logoGoldFlow 6s linear infinite;       /*анимация на 6 секунд linear-Анимация проигрывается равномерно, без колебаний скорости.(animation-timing-function) бесконечно-При помощи свойства animation-iteration-count можно указать, сколько раз будет проигрываться CSS-анимация.*/
 }
-/* Анимация перелива золотого логотипа */
+/* Анимация перелива золотого логотипа */       /*Директива @keyframes используется для создания ключевых кадров CSS-анимаций.*/
 @keyframes logoGoldFlow {
   0% { background-position: 0% center; }
   100% { background-position: 200% center; }
@@ -74,38 +74,38 @@ body {
 
 /* Меню навигации */
 .navigation {
-  display: inline;
+  display: inline;      /*Строчный тип элемента.*/
   gap: 20px;
 }
 
 
 /* Ссылки в навигации */
 .navigation a {
-  font-family: "Cinzel Decorative", serif;
-  font-size: 2rem;
-  font-weight: bold;
+  font-family: "Cinzel Decorative", serif;      /*Задает семейство шрифтов для текста*/
+  font-size: 2rem;      /*размер шрифта в 2 раза больше обычного*/
+  font-weight: bold;    /*ширина текста полужирный*/
   color: #e8dcc3;
-  text-decoration: none;
-  padding: 10px 40px;
-  border-radius: 50px;
-  background: none;
+  text-decoration: none;      /*Убирает подчеркивание текста*/
+  padding: 10px 40px;       /*внутрений отступ (10 пикселей сверху снизу и 40 пикселей слева и справа)*/
+  border-radius: 50px;      /*закругление углов*/
+  background: none;       /*фон*/
   transition: all 0.4s ease;
-  position: relative;
-  overflow: hidden;
+  position: relative;         /*Элемент остается в обычном потоке документа, но его можно сдвигать используя свойства top, right, bottom, left относительно его позиции в документе, а так же задавать позицию по оси Z используя z-index*/
+  overflow: hidden;         /*Содержимое элемента, которое не помещается в его размеры, обрезается.*/
 }
 
 /* Эффекты при наведении */
 .navigation a:hover {
-  color: transparent;
-  background: linear-gradient(45deg, #f9d976, #b8860b, #f7c873, #a97400);
-  background-size: 200% auto;
-  background-clip: text;
-  -webkit-background-clip: text;
+  color: transparent;     /*цвет прозрачный*/
+  background: linear-gradient(45deg, #f9d976, #b8860b, #f7c873, #a97400);/*фон градиент(45 градусов)*/
+  background-size: 200% auto;   /*Размер фонового изображения в процентах относительно размера контейнера, где первый параметр - ширина изображения, второй параметр - высота изображения*/
+  background-clip: text;        /*Фон будет применен для текста элемента. Чтобы эффект был виден, установите цвет текста элемента прозрачным color: transparent;*/
+  -webkit-background-clip: text;      /*обрезает любой фон (в том числе градиентный) по границе текста.*/
   border: 2px solid #d4af37;
   box-shadow: 0 0 8px rgba(255, 215, 0, 0.3);
-  animation: goldFlow 3s linear infinite;
+  animation: goldFlow 3s linear infinite;     /*анимация на 6 секунд linear-Анимация проигрывается равномерно, без колебаний скорости.(animation-timing-function) бесконечно-При помощи свойства animation-iteration-count можно указать, сколько раз будет проигрываться CSS-анимация.*/
 }
-
+/*Директива @keyframes используется для создания ключевых кадров CSS-анимаций.*/
 @keyframes goldFlow {
   0% { background-position: 0% center; }
   100% { background-position: 200% center; }
@@ -115,25 +115,24 @@ body {
 
 #hero {
   height: 100vh;
-  display: flex;
-  flex-direction: column;
+  display: flex;            /*Элемент становится flexbox контейнером, а его прямые потомки - элементами flexbox контейнера*/  
+  flex-direction: column;     /*Элементы идут друг под другом сверху вниз и по умолчанию занимают всю ширину flexbox контейнера*/
   justify-content: center;       /* Центрируем по вертикали */
   align-items: center;          /* Центрируем по горизонтали */
-  position: relative;
-  /*background-image: url('images/TCom_MarbleSlabGoldB_header3.jpg'); Установи нужный фон */
-  background-size: cover;
-  background-position: center;
+  position: relative;           /*Элемент остается в обычном потоке документа, но его можно сдвигать используя свойства top, right, bottom, left относительно его позиции в документе, а так же задавать позицию по оси Z используя z-index*/
+  background-size: cover;       /*Фоновое изображения будет растянуто на всю ширину и высоту контейнера с соблюдением пропорций*/
+  background-position: center;    /*Позиционирование фонового изображения используя ключевые слова.*/
   background-repeat: no-repeat;
-  overflow: hidden;
+  overflow: hidden;     /*Содержимое элемента, которое не помещается в его размеры, обрезается.*/
 }
 
 /* Логотип и навигация — наверху */
 header.main {
     width: 98.6%;
     display: flex;
-    justify-content: space-between;
-    padding: 10px 20px;
-    position: absolute;
+    justify-content: space-between;     /*Оставшееся пространство распределяется между элементами flexbox / grid*/
+    padding: 10px 20px;       /*внутрений отступ (10 пикселей сверху снизу и 20 пикселей слева и справа)*/
+    position: absolute;       /*Элемент удаляется из обычного потока документа и становится выше всех других элементов обычного потока. */
     top: 0;
     left: 0;
     z-index: 10;
@@ -142,53 +141,53 @@ header.main {
 
 /* Контент внутри первой секции */
 .hero-content {
-  text-align: center;
+  text-align: center;     /*Задает выравнивание текста*/
   z-index: 5;
 }
 
 /*Текст для слайдера на 1 странице*/
 .title-1 {
-  font-size: 60px;
-  font-weight:900;
+  font-size: 60px;      /*размер шрифта*/
+  font-weight:900;      /*толщина шрифта*/
   height: 60px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  display: flex;        /*Элемент становится flexbox контейнером, а его прямые потомки - элементами flexbox контейнера*/
+  justify-content: center;          /* Центрируем по вертикали */
+  align-items: center;      /*Элементы flexbox / grid выровнены в центре поперечной оси*/
 }
 
 .text-animation {
-  font-size: 70px;
-  margin-left: 210px;/*отступ слева и справа*/
+  font-size: 70px;        /*размер шрифта*/
+  margin-left: 210px;     /*внешний отступ слева и справа*/
   margin-right: 450px;
   color: gold;
   height: 240px;/*длина рамки*/
   background-color: rgba(0, 0, 0, 0.3);       /* Полупрозрачный фон */
   backdrop-filter: blur(6px);                /* Размытие фона */
-  padding: 0 15px;
-  border-radius: 35px;
-  overflow: hidden;
-  position: relative;
+  padding: 0 15px;        /*внутрений отступ (0 пикселей сверху снизу и 15 пикселей слева и справа)*/
+  border-radius: 35px;      /*закругление углов*/
+  overflow: hidden;         /*Содержимое элемента, которое не помещается в его размеры, обрезается.*/
+  position: relative;       /*Элемент остается в обычном потоке документа, но его можно сдвигать используя свойства top, right, bottom, left относительно его позиции в документе, а так же задавать позицию по оси Z используя z-index*/
   right: -450px;
   top: -90px;
-  font-family: "Cinzel Decorative", serif;
+  font-family: "Cinzel Decorative", serif;      /*Задает семейство шрифтов для текста*/
 }
 
 /*Место расположения всех text блоков*/
 .text-container {
-  display: flex;
-  flex-direction: column;
-  animation: move 15s infinite;
+  display: flex;        /*Элемент становится flexbox контейнером, а его прямые потомки - элементами flexbox контейнера*/
+  flex-direction: column;       /*Элементы идут друг под другом сверху вниз и по умолчанию занимают всю ширину flexbox контейнера*/
+  animation: move 15s infinite;     /*анимация на 15 секунд бесконечно-При помощи свойства animation-iteration-count можно указать, сколько раз будет проигрываться CSS-анимация.*/
 }
 
 .text {
-  text-transform: uppercase;
-  text-align: center;
+  text-transform: uppercase;      /*Задает верхний регистр для текста (все буквы заглавные)*/
+  text-align: center;     /*Задает выравнивание текста*/
   line-height: 80px;
-  font-size: 60px;
+  font-size: 60px;        /*размер шрифта*/        
   height: 360px;
 }
 
-/* Анимация для движения вверх */
+/* Анимация для движения вверх */         /*Директива @keyframes используется для создания ключевых кадров CSS-анимаций.*/
 @keyframes move {
   0%   { transform: translateY(0); }
   16%  { transform: translateY(-360px); }
@@ -200,56 +199,55 @@ header.main {
 }
 
 .hero-title {
-  font-size: 5rem;
-  font-family: 'Cinzel Decorative', serif;
-  margin-bottom: 20px;
+  font-size: 5rem;        /*размер шрифта в 5 раза большк обычного*/
+  font-family: 'Cinzel Decorative', serif;      /*Задает семейство шрифтов для текста*/
+  margin-bottom: 20px;    /*внешний отступ снизу 20 пикселей*/
   color: white;
 }
 
 .hero-subtext {
-    font-size: 1.5rem;
+    font-size: 1.5rem;      /*размер текста в 1.5 раза больше*/
     color: white;
 }
 
 .Words {
-    text-align: center;
-    font-family: 'Cinzel Decorative', serif;
-    font-size: 4rem;
+    text-align: center;     /*Задает выравнивание текста*/
+    font-family: 'Cinzel Decorative', serif;      /*Задает семейство шрифтов для текста*/
+    font-size: 4rem;        /*размер шрифта в 4 раза больше обычного*/
     color: #222;
-    margin-top: 60px;
+    margin-top: 60px;     /*внешний отступ сверху*/
 }
 
 /* === ВТОРАЯ СЕКЦИЯ === */
 
 #credit {
-  min-height: 100vh;
-  padding: 100px 40px;
-  /*background-image: url('images/TCom_MarbleSlabGoldB_header3.jpg');*/
-  background-size: cover;
-  background-position: center;
+  min-height: 100vh;        /*минимальная высота*/
+  padding: 100px 40px;        /*внутрений отступ (100 пикселей сверху снизу и 40 пикселей слева и справа)*/
+  background-size: cover;     /*Фоновое изображения будет растянуто на всю ширину и высоту контейнера с соблюдением пропорций*/
+  background-position: center;    /*Позиционирование фонового изображения используя ключевые слова.*/
   background-repeat: no-repeat;
   color: #ddd;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
+  display: flex;          /*Элемент становится flexbox контейнером, а его прямые потомки - элементами flexbox контейнера*/
+  flex-direction: column;       /*Элементы идут друг под другом сверху вниз и по умолчанию занимают всю ширину flexbox контейнера*/
+  justify-content: center;      /* Центрируем по вертикали */
 }
 
 
 #credit p {
-  position: relative;/*можно передвигать объекты*/
-  font-family: "Cinzel Decorative", serif;
+  position: relative;     /*Элемент остается в обычном потоке документа, но его можно сдвигать используя свойства top, right, bottom, left относительно его позиции в документе, а так же задавать позицию по оси Z используя z-index*/
+  font-family: "Cinzel Decorative", serif;      /*Задает семейство шрифтов для текста*/
   bottom: 450px;
-  font-size: 4em;
-  font-weight: 900;
-  font-weight: bold;/*все параметьры для золотой надписи*/
-  background: linear-gradient(45deg, #f9d976, #b8860b, #f7c873, #a97400);
-  background-size: 200% auto;
-  background-clip: text;
-  -webkit-background-clip: text;
+  font-size: 4em;           /*размер шрифта в 4 раза больше обычного*/
+  font-weight: 900;       /*ширина шрифта + полужирный*/
+  font-weight: bold;      /*все параметьры для золотой надписи*/
+  background: linear-gradient(45deg, #f9d976, #b8860b, #f7c873, #a97400);/*фон градиент(45 градусов)*/
+  background-size: 200% auto;     /*Размер фонового изображения в процентах относительно размера контейнера, где первый параметр - ширина изображения, второй параметр - высота изображения*/ 
+  background-clip: text;        /*Фон будет применен для текста элемента. Чтобы эффект был виден, установите цвет текста элемента прозрачным color: transparent;*/
+  -webkit-background-clip: text;      /*обрезает любой фон (в том числе градиентный) по границе текста.*/
   color: transparent;
-  animation: text-3 6s linear infinite;
+  animation: text-3 6s linear infinite;       /*анимация на 6 секунд linear-Анимация проигрывается равномерно, без колебаний скорости.(animation-timing-function) бесконечно-При помощи свойства animation-iteration-count можно указать, сколько раз будет проигрываться CSS-анимация.*/
 }
-/* Анимация перелива золотого */
+/* Анимация перелива золотого */          /*Директива @keyframes используется для создания ключевых кадров CSS-анимаций.*/
 @keyframes text-3 {
   0% { background-position: 0% center; }
   100% { background-position: 200% center; }
@@ -258,56 +256,56 @@ header.main {
 
 /*Текст для слайдера на 2 странице*/
 .title-2 {
-  font-size: 60px;
-  font-weight:900;
+  font-size: 60px;        /*размер шрифта*/
+  font-weight:900;        /*ширина шрифта*/
   height: 60px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  display: flex;          /*Элемент становится flexbox контейнером, а его прямые потомки - элементами flexbox контейнера*/
+  justify-content: center;      /*Элементы flexbox / grid центрированы вдоль главной оси контейнера*/
+  align-items: center;      /*Элементы flexbox / grid выровнены в центре поперечной оси*/
 }
 
 .text-animation-2 {
-  font-size: 70px;
-  margin-left: 210px;/*отступ слева и справа*/
+  font-size: 70px;          /*размер шрифта*/
+  margin-left: 210px;       /*внешний отступ слева и справа*/
   margin-right: 210px;
   color: gold;
   height: 720px;/*длина рамки*/
   background-color: rgba(0, 0, 0, 0.3);       /* Полупрозрачный фон */
   backdrop-filter: blur(6px);                /* Размытие фона */
-  padding: 0 15px;
-  border-radius: 35px;
-  overflow: hidden;
-  position: relative;
+  padding: 0 15px;          /*внутрений отступ (0 пикселей сверху снизу и 15 пикселей слева и справа)*/
+  border-radius: 35px;      /*закругление углов*/
+  overflow: hidden;       /*Содержимое элемента, которое не помещается в его размеры, обрезается.*/
+  position: relative;     /*Элемент остается в обычном потоке документа, но его можно сдвигать используя свойства top, right, bottom, left относительно его позиции в документе, а так же задавать позицию по оси Z используя z-index*/
   right: 200px;
   top: -90px;
 }
 
 /*Место расположения всех text блоков*/
 .text-container-2 {
-  display: flex;
-  flex-direction: column;
+  display: flex;            /*Элемент становится flexbox контейнером, а его прямые потомки - элементами flexbox контейнера*/
+  flex-direction: column;   /*Элементы идут друг под другом сверху вниз и по умолчанию занимают всю ширину flexbox контейнера*/
 }
 
 .text-2 {
-  text-transform: uppercase;
-  text-align: center;
-  line-height: 55px;/*расстояние между строчками*/
-  font-size: 60px;
+  text-transform: uppercase;      /*Задает верхний регистр для текста (все буквы заглавные)*/
+  text-align: center;     /*Задает выравнивание текста*/
+  line-height: 55px;      /*расстояние между строчками*/
+  font-size: 60px;        /*размер шрифта*/
   height: 360px;
 }
 
 .text-2 a{
-  font-family: "Cinzel Decorative", serif;
-  font-size: 3rem;/*размер текста*/
-  font-weight: bold;
-  background: linear-gradient(45deg, #f9d976, #b8860b, #f7c873, #a97400);
-  background-size: 200% auto;
-  background-clip: text;
-  -webkit-background-clip: text;
+  font-family: "Cinzel Decorative", serif;      /*Задает семейство шрифтов для текста*/
+  font-size: 3rem;        /*размер текста в 3 раза больше обычного*/
+  font-weight: bold;      /*полужирный шрифт*/
+  background: linear-gradient(45deg, #f9d976, #b8860b, #f7c873, #a97400);/*фон градиент(45 градусов)*/
+  background-size: 200% auto;         /*Размер фонового изображения в процентах относительно размера контейнера, где первый параметр - ширина изображения, второй параметр - высота изображения*/
+  background-clip: text;        /*Фон будет применен для текста элемента. Чтобы эффект был виден, установите цвет текста элемента прозрачным color: transparent;*/
+  -webkit-background-clip: text;      /*обрезает любой фон (в том числе градиентный) по границе текста.*/
   color: transparent;
-  animation: text-2 6s linear infinite;
+  animation: text-2 6s linear infinite;       /*анимация на 6 секунд linear-Анимация проигрывается равномерно, без колебаний скорости.(animation-timing-function) бесконечно-При помощи свойства animation-iteration-count можно указать, сколько раз будет проигрываться CSS-анимация.*/
 }
-/* Анимация перелива золотого */
+/* Анимация перелива золотого */          /*Директива @keyframes используется для создания ключевых кадров CSS-анимаций.*/
 @keyframes text-2 {
   0% { background-position: 0% center; }
   100% { background-position: 200% center; }
@@ -317,42 +315,42 @@ header.main {
 /* === ПОДВИЖНЫЕ СТАТУИ (необязательные) === */
 
 #men /*статуя на 1 странице*/{
-  position: absolute;
+  position: absolute;     /*Элемент удаляется из обычного потока документа и становится выше всех других элементов обычного потока. */
   top: 67px;
   left: -6%;
 }
 
 #women /*статуя на 2 странице*/{
-  position: absolute;
+  position: absolute;     /*Элемент удаляется из обычного потока документа и становится выше всех других элементов обычного потока. */
   left: 1840px;
-  top:840px;/*подогнал статую по горизонтали вниз*/
+  top:840px;      /*подогнал статую по горизонтали вниз*/
 }
 
 
 /* === ДОПОЛНИТЕЛЬНЫЙ ТЕКСТ (Words) === */
 
 .Words {
-  text-align: center;
-  font-family: 'Cinzel Decorative', serif;
-  font-size: 4rem;
+  text-align: center;       /*Задает выравнивание текста*/
+  font-family: 'Cinzel Decorative', serif;      /*Задает семейство шрифтов для текста*/
+  font-size: 4rem;        /*размер шрифта в 4 раза больше обычного*/
   color: #222;
-  margin-top: 60px;
+  margin-top: 60px;       /*внешний отступ сверху*/
 }
 
 /* === investition — третья СЕКЦИЯ === */
 #investition p{
-  font-size: 5em;
-  position: relative;
+  font-size: 5em;       /*размер шрифта в 5 раз больше обычного*/
+  position: relative;   /*Элемент остается в обычном потоке документа, но его можно сдвигать используя свойства top, right, bottom, left относительно его позиции в документе, а так же задавать позицию по оси Z используя z-index*/
   top: -220px;
-  font-family: "Cinzel Decorative", serif;
-  background: linear-gradient(45deg, #f9d976, #b8860b, #f7c873, #a97400);
-  background-size: 200% auto;
-  background-clip: text;
-  -webkit-background-clip: text;
+  font-family: "Cinzel Decorative", serif;      /*Задает семейство шрифтов для текста*/
+  background: linear-gradient(45deg, #f9d976, #b8860b, #f7c873, #a97400);/*фон градиент(45 градусов)*/
+  background-size: 200% auto;       /*Размер фонового изображения в процентах относительно размера контейнера, где первый параметр - ширина изображения, второй параметр - высота изображения*/
+  background-clip: text;        /*Фон будет применен для текста элемента. Чтобы эффект был виден, установите цвет текста элемента прозрачным color: transparent;*/
+  -webkit-background-clip: text;        /*обрезает любой фон (в том числе градиентный) по границе текста.*/
   color: transparent;
-  animation: text-3 6s linear infinite;
+  animation: text-3 6s linear infinite;       /*анимация на 6 секунд linear-Анимация проигрывается равномерно, без колебаний скорости.(animation-timing-function) бесконечно-При помощи свойства animation-iteration-count можно указать, сколько раз будет проигрываться CSS-анимация.*/
 }
-/* Анимация перелива золотого */
+/* Анимация перелива золотого */          /*Директива @keyframes используется для создания ключевых кадров CSS-анимаций.*/
 @keyframes text-3 {
   0% { background-position: 0% center; }
   100% { background-position: 200% center; }
@@ -360,84 +358,84 @@ header.main {
 
 /*Текст для слайдера на 3 странице*/
 .title-3 {
-  font-size: 60px;
-  font-weight:900;
+  font-size: 60px;          /*размер шрифта*/
+  font-weight:900;        /*ширина шрифта*/
   height: 60px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  display: flex;            /*Элемент становится flexbox контейнером, а его прямые потомки - элементами flexbox контейнера*/
+  justify-content: center;    /* Центрируем по вертикали */
+  align-items: center;      /*Элементы flexbox / grid выровнены в центре поперечной оси*/
 }
 
 .text-animation-3 {
-  font-size: 70px;
-  margin-left: 250px;/*отступ слева и справа*/
+  font-size: 70px;        /*размер шрифта*/
+  margin-left: 250px;     /*внешний отступ слева и справа*/
   margin-right: 250px;
   color: gold;
-  height: 1080px;/*длина рамки*/
+  height: 1080px;         /*длина рамки*/
   background-color: rgba(0, 0, 0, 0.3);       /* Полупрозрачный фон */
   backdrop-filter: blur(6px);                /* Размытие фона */
-  padding: 0 15px;
-  border-radius: 35px;
-  overflow: hidden;
-  position: relative;
+  padding: 0 15px;        /*внутрений отступ (0 пикселей сверху снизу и 15 пикселей слева и справа)*/
+  border-radius: 35px;    /*закругление углов*/
+  overflow: hidden;       /*Содержимое элемента, которое не помещается в его размеры, обрезается.*/
+  position: relative;     /*Элемент остается в обычном потоке документа, но его можно сдвигать используя свойства top, right, bottom, left относительно его позиции в документе, а так же задавать позицию по оси Z используя z-index*/
   left: 200px;
   top: -1200px;
 }
 
 /*Место расположения всех text блоков*/
 .text-container-3 {
-  display: flex;
-  flex-direction: column;
+  display: flex;        /*Элемент становится flexbox контейнером, а его прямые потомки - элементами flexbox контейнера*/
+  flex-direction: column;     /*Элементы идут друг под другом сверху вниз и по умолчанию занимают всю ширину flexbox контейнера*/
 }
 
 .text-3 {
-  text-transform: uppercase;
-  text-align: center;
-  line-height: 80px;/*расстояние между строчками*/
-  font-size: 60px;
+  text-transform: uppercase;    /*Задает верхний регистр для текста (все буквы заглавные)*/
+  text-align: center;       /*Задает выравнивание текста*/
+  line-height: 80px;      /*расстояние между строчками*/
+  font-size: 60px;        /*размер шрифта*/
   height: 360px;
 }
 
 .text-3 a{
-  font-family: "Cinzel Decorative", serif;
-  font-size: 3.3rem;/*размер текста*/
-  font-weight: bold;
-  background: linear-gradient(45deg, #f9d976, #b8860b, #f7c873, #a97400);
-  background-size: 200% auto;
-  background-clip: text;
-  -webkit-background-clip: text;
+  font-family: "Cinzel Decorative", serif;      /*Задает семейство шрифтов для текста*/
+  font-size: 3.3rem;      /*размер текста в 3.3 раза больше обычного*/
+  font-weight: bold;      /*полужирный шрифт*/
+  background: linear-gradient(45deg, #f9d976, #b8860b, #f7c873, #a97400);/*фон градиент(45 градусов)*/
+  background-size: 200% auto;       /*Размер фонового изображения в процентах относительно размера контейнера, где первый параметр - ширина изображения, второй параметр - высота изображения*/
+  background-clip: text;        /*Фон будет применен для текста элемента. Чтобы эффект был виден, установите цвет текста элемента прозрачным color: transparent;*/
+  -webkit-background-clip: text;        /*обрезает любой фон (в том числе градиентный) по границе текста.*/
   color: transparent;
-  animation: text-3 6s linear infinite;
+  animation: text-3 6s linear infinite;       /*анимация на 6 секунд linear-Анимация проигрывается равномерно, без колебаний скорости.(animation-timing-function) бесконечно-При помощи свойства animation-iteration-count можно указать, сколько раз будет проигрываться CSS-анимация.*/
 }
-/* Анимация перелива золотого */
+/* Анимация перелива золотого */      /*Директива @keyframes используется для создания ключевых кадров CSS-анимаций.*/
 @keyframes text-3 {
   0% { background-position: 0% center; }
   100% { background-position: 200% center; }
 }
 
 #men-2/*статуя на 3 странице*/{
-  position: relative;
+  position: relative;     /*Элемент остается в обычном потоке документа, но его можно сдвигать используя свойства top, right, bottom, left относительно его позиции в документе, а так же задавать позицию по оси Z используя z-index*/
   bottom: 370px;
   left: -450px;
 }
 
 #acsii{
-  height: 1280px;
+  height: 1280px; /*длина страницы*/
 }
 /* === acsii — четвертая СЕКЦИЯ === */
 #acsii p{
-  font-size: 6em;
-  position: relative;
+  font-size: 6em;       /*размер шрифта в 6 раз больше обычного*/
+  position: relative;   /*Элемент остается в обычном потоке документа, но его можно сдвигать используя свойства top, right, bottom, left относительно его позиции в документе, а так же задавать позицию по оси Z используя z-index*/
   top: -500px;
-  font-family: "Cinzel Decorative", serif;
-  background: linear-gradient(45deg, #f9d976, #b8860b, #f7c873, #a97400);
-  background-size: 200% auto;
-  background-clip: text;
-  -webkit-background-clip: text;
+  font-family: "Cinzel Decorative", serif;        /*Задает семейство шрифтов для текста*/
+  background: linear-gradient(45deg, #f9d976, #b8860b, #f7c873, #a97400);/*фон градиент(45 градусов)*/
+  background-size: 200% auto;         /*Размер фонового изображения в процентах относительно размера контейнера, где первый параметр - ширина изображения, второй параметр - высота изображения*/
+  background-clip: text;      /*Фон будет применен для текста элемента. Чтобы эффект был виден, установите цвет текста элемента прозрачным color: transparent;*/
+  -webkit-background-clip: text;        /*обрезает любой фон (в том числе градиентный) по границе текста.*/
   color: transparent;
-  animation: text-4 6s linear infinite;
+  animation: text-4 6s linear infinite;     /*анимация на 6 секунд linear-Анимация проигрывается равномерно, без колебаний скорости.(animation-timing-function) бесконечно-При помощи свойства animation-iteration-count можно указать, сколько раз будет проигрываться CSS-анимация.*/
 }
-/* Анимация перелива золотого */
+/* Анимация перелива золотого */      /*Директива @keyframes используется для создания ключевых кадров CSS-анимаций.*/
 @keyframes text-4 {
   0% { background-position: 0% center; }
   100% { background-position: 200% center; }
@@ -445,103 +443,104 @@ header.main {
 
 /*Текст для слайдера на 3 странице*/
 .title-4 {
-  font-size: 60px;
-  font-weight:900;
+  font-size: 60px;      /*размер шрифта*/
+  font-weight:900;      /*ширина текста*/
   height: 60px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  display: flex;        /*Элемент становится flexbox контейнером, а его прямые потомки - элементами flexbox контейнера*/
+  justify-content: center;        /* Центрируем по вертикали */
+  align-items: center;      /*Элементы flexbox / grid выровнены в центре поперечной оси*/
 }
 
 .text-animation-4 {
-  font-size: 70px;
-  margin-left: 250px;/*отступ слева и справа*/
+  font-size: 70px;      /*размер шрифта*/
+  margin-left: 250px;   /*внешний отступ слева и справа*/
   margin-right: 250px;
   color: gold;
-  height: 1080px;/*длина рамки*/
+  height: 1080px;         /*длина рамки*/
   background-color: rgba(0, 0, 0, 0.3);       /* Полупрозрачный фон */
   backdrop-filter: blur(6px);                /* Размытие фона */
-  padding: 0 15px;
-  border-radius: 35px;
-  overflow: hidden;
-  position: relative;
+  padding: 0 15px;          /*внутрений отступ (0 пикселей сверху снизу и 15 пикселей слева и справа)*/
+  border-radius: 35px;      /*закругление углов*/
+  overflow: hidden;         /*Содержимое элемента, которое не помещается в его размеры, обрезается.*/
+  position: relative;     /*Элемент остается в обычном потоке документа, но его можно сдвигать используя свойства top, right, bottom, left относительно его позиции в документе, а так же задавать позицию по оси Z используя z-index*/
   left: -150px;
   top: -1750px;
 }
 
 /*Место расположения всех text блоков*/
 .text-container-4 {
-  display: flex;
-  flex-direction: column;
+  display: flex;      /*Элемент становится flexbox контейнером, а его прямые потомки - элементами flexbox контейнера*/
+  flex-direction: column;     /*Элементы идут друг под другом сверху вниз и по умолчанию занимают всю ширину flexbox контейнера*/
 }
 
+
 .text-4 {
-  text-transform: uppercase;
-  text-align: center;
-  line-height: 80px;/*расстояние между строчками*/
-  font-size: 60px;
+  text-transform: uppercase;    /*Задает верхний регистр для текста (все буквы заглавные)*/
+  text-align: center;     /*Задает выравнивание текста*/
+  line-height: 80px;    /*расстояние между строчками*/
+  font-size: 60px;      /*размер шрифта*/
   height: 360px;
 }
 
 .text-4 a{
-  font-family: "Cinzel Decorative", serif;
-  font-size: 3.3rem;/*размер текста*/
-  font-weight: bold;
-  background: linear-gradient(45deg, #f9d976, #b8860b, #f7c873, #a97400);
-  background-size: 200% auto;
-  background-clip: text;
-  -webkit-background-clip: text;
+  font-family: "Cinzel Decorative", serif;        /*Задает семейство шрифтов для текста*/
+  font-size: 3.3rem;      /*размер текста в 3.3 раза больше обычного*/
+  font-weight: bold;       /*полужирный шрифт*/
+  background: linear-gradient(45deg, #f9d976, #b8860b, #f7c873, #a97400);   /*фон градиент(45 градусов)*/
+  background-size: 200% auto;       /*Размер фонового изображения в процентах относительно размера контейнера, где первый параметр - ширина изображения, второй параметр - высота изображения*/
+  background-clip: text;      /*Фон будет применен для текста элемента. Чтобы эффект был виден, установите цвет текста элемента прозрачным color: transparent;*/
+  -webkit-background-clip: text;      /*обрезает любой фон (в том числе градиентный) по границе текста.*/
   color: transparent;
-  animation: text-4 6s linear infinite;
+  animation: text-4 6s linear infinite;   /*анимация на 6 секунд linear-Анимация проигрывается равномерно, без колебаний скорости.(animation-timing-function) бесконечно-При помощи свойства animation-iteration-count можно указать, сколько раз будет проигрываться CSS-анимация.*/
 }
-/* Анимация перелива золотого */
-@keyframes text-4 {
+/* Анимация перелива золотого */    /*Директива @keyframes используется для создания ключевых кадров CSS-анимаций.*/
+@keyframes text-4 {   
   0% { background-position: 0% center; }
   100% { background-position: 200% center; }
 }
 
 #women-2/*статуя на 4 странице*/{
-  position: relative;
+  position: relative;       /*Элемент остается в обычном потоке документа, но его можно сдвигать используя свойства top, right, bottom, left относительно его позиции в документе, а так же задавать позицию по оси Z используя z-index*/
   bottom: 750px;
   left: 800px;
 }
 /* === FOOTER === */
 
 #footer {
-  background: linear-gradient(180deg, #2f2f2f 0%, #1f1f1f 100%);
+  background: linear-gradient(180deg, #2f2f2f 0%, #1f1f1f 100%); /*фон градиент(180 градусов)*/
   color: #ddd;
-  font-family: 'Cinzel Decorative', serif;
-  padding: 10px 0 0;
-  box-shadow: 0 -5px 15px rgba(0, 0, 0, 0.5);
-  scroll-snap-align: none; /* отключаем прилипающий эффект */
+  font-family: 'Cinzel Decorative', serif;      /*Задает семейство шрифтов для текста*/
+  padding: 10px 0 0;        /*внутрений отступ (10 пикселей сверху, 0 пикселей слева и справа и 0 пикселей снизу)*/
+  box-shadow: 0 -5px 15px rgba(0, 0, 0, 0.5); /*Задает тень элемента используя четыре параметра. Первый - сдвиг по оси X, второй - сдвиг по оси Y, третий - размытие тени, четвертый - цвет тени*/
+  scroll-snap-align: none;      /* отключаем прилипающий эффект */
 }
 
 /* Контейнер внутри футера */
 .footer__container {
-  display: flex;
-  flex-wrap: wrap;
+  display: flex;      /*Элемент становится flexbox контейнером, а его прямые потомки - элементами flexbox контейнера*/
+  flex-wrap: wrap;    /*Разрешает перенос элементов на новую строку, если они не помещаются в текущей строке.*/
   height: 900px;
-  gap: 40px;
-  padding: 40px 60px;
-  justify-content: space-around;
-  border-bottom: 1px solid #444;
+  gap: 40px;    /*Вы можете задать одинаковый отступ между строк и столбцов grid сетки, используя один параметр*/
+  padding: 40px 60px;       /*внутрений отступ (40 пикселей сверху снизу и 60 пикселей слева и справа)*/
+  justify-content: space-around;        /*Оставшееся пространство распределяется вокруг элементов flexbox / grid. Пустое пространство до первого и после последнего элемента равно половине пространства между каждым элементом.*/
+  border-bottom: 1px solid #444;      /*Создание границы снизу для элемента. Порядок значений: толщина, стиль и цвет. */
 }
 
 .footer__section h3 {
-  margin-bottom: 12px;
-  font-size: 1.4rem;
+  margin-bottom: 12px;        /*внешний отступ снизу*/
+  font-size: 1.4rem;          /*размер шрифта d 1.4 раза больше обычного*/
   color: #f9f5ed;
-  text-transform: uppercase;
-  letter-spacing: 1px;
+  text-transform: uppercase;    /*Задает верхний регистр для текста (все буквы заглавные)*/
+  letter-spacing: 1px;    /*Задает отступ между символами текста*/
 }
 
 .footer__section p,
 .footer__section a {
-  margin: 5px 0;
-  font-size: 2rem;
+  margin: 5px 0;        /*внешний отступ (5 пикселей сверху снизу и 0 пикселей слева и справа)*/
+  font-size: 2rem;      /*размер шрифта*/
   color: #ccc;
-  text-decoration: none;
-  transition: color 0.3s ease;
+  text-decoration: none;    /*Убирает подчеркивание текста*/
+  transition: color 0.3s ease;    /*Определение перехода для одного свойства. Порядок параметров: transition-property transition-duration transition-timing-function transition-delay*/
 }
 
 .footer__section a:hover {
@@ -550,10 +549,10 @@ header.main {
 
 /* Нижняя строка футера */
 .footer__bottom {
-  text-align: center;
-  padding: 20px 0;
-  background-color: #1c1c1c;
-  font-size: 1rem;
+  text-align: center;       /*Задает выравнивание текста*/
+  padding: 20px 0;          /*внутрений отступ (20 пикселей сверху снизу и 0 пикселей слева и справа)*/
+  background-color: #1c1c1c;    /*ЦВЕТ ФОНА*/
+  font-size: 1rem;       /*размер шрифта*/
   color: #777;
 }
 
